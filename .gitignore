@@ -5,3 +5,4 @@ __pycache__/
 agent-tools/
 data/*.html
 data/stocks_close.csv
+data/data.parquet

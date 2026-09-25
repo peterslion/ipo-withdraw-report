@@ -4,3 +4,5 @@ lxml>=5.0
 html5lib>=1.1
 beautifulsoup4>=4.12
 yfinance>=0.2.40
+gdown>=5.0
+pyarrow>=14.0

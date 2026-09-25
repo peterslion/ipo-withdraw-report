@@ -56,3 +56,18 @@ From each ticker’s first Yahoo close, `future_growth_m_m = Close.shift(-21*m) 
 | 12 | 0.492 | 5.82 |
 
 The typical 2025 IPO is already below the first close after one month, and the median keeps sliding toward ~0.48–0.49 by 11–12 months. An investor who buys at the first close and holds a *typical* name loses as the horizon lengthens; there is no median edge in “waiting it out.” Means are huge because of bad ticks / outliers (PPCB’s first close is $0.02, then a 12,500× one-month ratio). The median is the right statistic: the average is not a tradeable IPO experience.
+
+## Q4 — RSI oversold ($1000 per signal)
+
+**$65.8 thousand** net income (`net_income / 1000`).
+
+Buy $1,000 whenever `rsi < 30` between 2000-01-01 and 2025-06-01; exit on `growth_future_30d`. Formula: `1000 * (growth_future_30d - 1).sum()`.
+
+| | RSI < 25 | RSI < 30 |
+|---|---|---|
+| Trades | 1,568 | **5,206** |
+| Avg 30-day return | — | **1.26%** |
+| Win rate | — | **55.13%** |
+| Net income | — | **$65,806** |
+
+Raising the threshold from 25 to 30 more than triples the number of trades. The edge is modest but the win rate is above 50%, so capital grows over the 25-year window.
