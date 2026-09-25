@@ -1,5 +1,7 @@
 # IPOScoop recently filed — question series
 
+Private GitHub repo: [peterslion/ipo-withdraw-report](https://github.com/peterslion/ipo-withdraw-report).
+
 Pandas solutions for IPOScoop [recently filed IPOs](https://www.iposcoop.com/ipos-recently-filed). Question 1 is implemented; later questions from the same list go in `questions/` and are recorded in [ANSWERS.md](ANSWERS.md).
 
 ## Q1 answer
@@ -19,6 +21,13 @@ Offline snapshot:
 python questions/q01_withdrawn_by_company_type.py \
   --source data/recently_filed.csv \
   --before 2026-09-11
+```
+
+Clone from GitHub:
+
+```bash
+git clone https://github.com/peterslion/ipo-withdraw-report.git
+cd ipo-withdraw-report
 ```
 
 ## Layout
