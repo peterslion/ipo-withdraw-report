@@ -8,6 +8,7 @@ Pandas solutions for IPOScoop [recently filed IPOs](https://www.iposcoop.com/ipo
 
 - **Q1:** Acquisition Corp — **$499.985 million** withdrawn IPO value.
 - **Q2:** Median Sharpe as of 2026-09-11 — **0.0501**.
+- **Q3:** Best fixed hold after IPO — **1 month**, median growth **0.9354**.
 
 ```bash
 python3 -m venv .venv
@@ -17,6 +18,9 @@ python questions/q01_withdrawn_by_company_type.py
 python questions/q02_median_sharpe_2025_ipos.py \
   --pricings data/ipos_2025_pricings.csv \
   --snapshot data/q02_asof_2026-09-11.csv
+python questions/q03_fixed_months_holding.py \
+  --close data/stocks_close.csv \
+  --snapshot data/q03_ipo_entry_growth.csv
 ```
 
 Offline snapshot:
@@ -41,6 +45,7 @@ cd ipo-withdraw-report
 | `ipo_scoop.py` | Shared `read_html` loader, price/volume parsers, company-type rules |
 | `questions/q01_withdrawn_by_company_type.py` | Withdrawn value by company class |
 | `questions/q02_median_sharpe_2025_ipos.py` | 2025 IPO Sharpe ratios via yfinance |
+| `questions/q03_fixed_months_holding.py` | 1–12 month hold from first close |
 | `data/recently_filed.csv` | Snapshot of the recently filed table |
 | `data/ipos_2025_pricings.csv` | Snapshot of 2025 IPOScoop pricings |
 | `ANSWERS.md` | Short answers for each question |

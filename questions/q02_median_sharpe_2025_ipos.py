@@ -75,6 +75,7 @@ def engineer(close: pd.DataFrame) -> pd.DataFrame:
         .rename("Close")
         .rename_axis(["Date", "Ticker"])
         .reset_index()
+        .dropna(subset=["Close"])
         .sort_values(["Ticker", "Date"])
     )
     grouped = stocks_df.groupby("Ticker")["Close"]
