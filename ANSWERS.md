@@ -71,3 +71,22 @@ Buy $1,000 whenever `rsi < 30` between 2000-01-01 and 2025-06-01; exit on `growt
 | Net income | — | **$65,806** |
 
 Raising the threshold from 25 to 30 more than triples the number of trades. The edge is modest but the win rate is above 50%, so capital grows over the 25-year window.
+
+## Q4b — Same entries, different exits
+
+Same `RSI < 30` entries and $1,000 tickets. Path P&L uses `Close_x` (the homework `growth_future_30d` field is milder and is **not** equal to a 21- or 30-day close ratio, so compare exits only on the Close path).
+
+| Exit | Trades | Win rate | Avg return | Median hold | Net | Peak capital |
+|---|---|---|---|---|---|---|
+| Homework field (`growth_future_30d`) | 5,206 | 55.1% | 1.26% | 30d | **$65.8k** | — |
+| Hold 21 trading days | 5,206 | 59.9% | 4.11% | 21d | $214k | $255k |
+| Hold 30 trading days | 5,200 | 60.0% | 5.17% | 30d | $269k | $266k |
+| **Exit when RSI ≥ 50** | 5,206 | **75.5%** | **14.9%** | **17d** | **$776k** | $306k |
+| Exit when RSI ≥ 40 | 5,206 | 76.6% | 13.7% | 8d | $714k | $288k |
+| RSI ≥ 50 or 30d cap | 5,206 | 69.2% | 4.50% | 17d | $234k | $255k |
+| RSI ≥ 50 or 60d cap | 5,206 | 71.1% | 6.04% | 17d | $315k | $263k |
+| −10% stop or 30d | 5,200 | 53.7% | 3.67% | 30d | $191k | **$111k** |
+| RSI ≥ 50 or −10% stop | 5,206 | 69.0% | 13.2% | 13d | $686k | $301k |
+| RSI ≥ 50 or −10% or 60d | 5,206 | 64.6% | 4.37% | 13d | $227k | **$90k** |
+
+Letting the bounce finish (exit at RSI 50, no time cap) is the profitability winner: win rate jumps to ~76% and net becomes **$776k**. A −10% stop **cuts peak capital** (to ~$90–111k) but also cuts total profit because it stops out trades that later recover. Capping the RSI-50 exit at 30 days throws away the long winners and lands near the plain time stop.

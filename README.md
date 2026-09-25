@@ -24,6 +24,7 @@ python questions/q03_fixed_months_holding.py \
   --close data/stocks_close.csv \
   --snapshot data/q03_ipo_entry_growth.csv
 python questions/q04_rsi_oversold.py --snapshot data/q04_rsi_trades.csv
+python questions/q04_rsi_exit_simulation.py
 ```
 
 Offline snapshot:
@@ -50,6 +51,7 @@ cd ipo-withdraw-report
 | `questions/q02_median_sharpe_2025_ipos.py` | 2025 IPO Sharpe ratios via yfinance |
 | `questions/q03_fixed_months_holding.py` | 1–12 month hold from first close |
 | `questions/q04_rsi_oversold.py` | RSI < 30, $1000 per 30-day trade |
+| `questions/q04_rsi_exit_simulation.py` | Same entries, RSI/stop/time exits |
 | `data/recently_filed.csv` | Snapshot of the recently filed table |
 | `data/ipos_2025_pricings.csv` | Snapshot of 2025 IPOScoop pricings |
 | `ANSWERS.md` | Short answers for each question |
