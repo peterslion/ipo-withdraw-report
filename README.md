@@ -10,6 +10,7 @@ Pandas solutions for IPOScoop [recently filed IPOs](https://www.iposcoop.com/ipo
 - **Q2:** Median Sharpe as of 2026-09-11 — **0.0501**.
 - **Q3:** Best fixed hold after IPO — **1 month**, median growth **0.9354**.
 - **Q4:** RSI < 30 oversold strategy — **$65.8 thousand** net income.
+- **Q4b:** Best simulated exit — wait for **RSI ≥ 50** (**$776k** on Close path; homework 30d field remains $65.8k).
 
 ```bash
 python3 -m venv .venv
